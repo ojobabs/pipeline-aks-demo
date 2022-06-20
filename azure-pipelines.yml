@@ -35,9 +35,3 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: '''$(tag)'''
-    - task: PublishPipelineArtifact@1
-      displayName: Deploy to AKS
-      inputs:
-        targetPath: '$(Pipeline.Workspace)'
-        artifact: 'manifests'
-        publishLocation: 'pipeline'

@@ -31,7 +31,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         containerRegistry: 'container reg'
-        repository: '$(imageRepository)'
+        repository: 'ojobabs'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: '''$(tag)'''
+        tags: '$(tag)'

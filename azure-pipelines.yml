@@ -33,7 +33,7 @@ stages:
         containerRegistry: 'container reg'
         repository: '$(imageRepository)'
         command: 'buildAndPush'
-        Dockerfile: '$**/app/Dockerfile'
+        Dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: '''$(tag)'''
     - task: PublishPipelineArtifact@1
       displayName: Deploy to AKS
